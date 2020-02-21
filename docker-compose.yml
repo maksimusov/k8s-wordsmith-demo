@@ -4,16 +4,16 @@ services:
 
   db:
     build: db
-    image: dockersamples/k8s-wordsmith-db
+    image: MaksimUsov/test-db
 
   words:
     build: words
-    image: dockersamples/k8s-wordsmith-api
+    image: MaksimUsov/test-api
     deploy:
       replicas: 5
 
   web:
     build: web
-    image: dockersamples/k8s-wordsmith-web
+    image: MaksimUsov/test-web
     ports:
      - "8080:80"
